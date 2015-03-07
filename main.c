@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     FILE *pipe;
     
     /* Get a pipe where the output from the scripts comes in */
-    pipe = popen("sh listener.sh", "r");
+    pipe = popen("sh controller.sh", "r");
     if (pipe == NULL) {  /* check for errors */
         perror(argv[0]); /* report error message */
         return 1;        /* return with exit code indicating error */
