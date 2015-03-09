@@ -7,6 +7,7 @@
 swipl<<END
 [head].
 consult(mail).
-mail(send).
-mail(forward).
+command(mail).
+address('bill@gmail.com').
+message(hello).
 END
