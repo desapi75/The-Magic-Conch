@@ -1,0 +1,11 @@
+The Magic Conch Philosiphy 
+
+This Project is intented to be built with the UNIX philosiphy. This means that
+this project should be broken up into many small uncoupled parts to prevent
+complication. This will also allow more ease amongst the opensource community
+in modifying the project. This project should be built with the intention that
+users with very little programming experience can modify the program to suite
+their needs. No single part is going to make the program run well but instead
+many small parts working together. Some parts may seem trivial and useless but
+in fact when combined with other parts add a whole new layer of posibilities
+to the project.
