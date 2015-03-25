@@ -1,5 +1,7 @@
 # The main file for THE-MAGIC-CONCH
 # author Salvatore DeSapio
+import subprocess
+
 print("\n\n")
 print("=============================================")
 print("=	     The-Magic-Conch               =")
@@ -11,7 +13,15 @@ command = raw_input('Hello, how can I help you?\n')
 plgcommand = command.split()
 
 
-#*********write code so that this list will be turned into a prolog command for my-nlp-test.pl*********
+# create prolog command
+plgcommand = "testparse("+str(plgcommand)+",Parse)."
 
 #output command for testing purposes
 print(plgcommand)
+
+# start prolog interpreter
+subprocess.call(['swipl', 'my-nlp-test.pl'], shell=True)
+
+#***********find a way to run prolog command in intereter
+
+
