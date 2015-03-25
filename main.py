@@ -18,10 +18,12 @@ plgcommand = "testparse("+str(plgcommand)+",Parse)."
 
 #output command for testing purposes
 print(plgcommand)
-
+###########################################
+# This method will be scrapt in favor of using unix domain sockets
+################################
 # start prolog interpreter
 subprocess.call(['swipl', 'my-nlp-test.pl'], shell=True)
 
-#***********find a way to run prolog command in intereter
+
 
 
