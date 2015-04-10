@@ -1,8 +1,13 @@
 run :-
+	tty_clear,
+	write('============================================='), nl,
+	write('=             The-Magic-Conch               ='), nl,
+	write('=        English to Shell Translater        ='), nl,
+	write('============================================='), nl,
 	converse.
 
 converse :-
-	write('Hello, what would you like me to do:'), nl,
+	nl, write('Hello, what would you like me to do:'), nl,
 	read(Sentence),
 	parse_sentence(Sentence).
 
