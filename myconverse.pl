@@ -7,8 +7,8 @@ run :-
 	converse.
 
 converse :-
-	nl, write('Hello, what would you like me to do:'), nl,
-	read(Sentence),
+	nl, write('Hello, what would you like me to do?'), nl,
+	read(Sentence), 
 	parse_sentence(Sentence).
 
 parse_sentence([quit]) :- !.

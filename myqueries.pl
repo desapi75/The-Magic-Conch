@@ -24,14 +24,11 @@ det --> [this].
 % below are just stubs            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 verb(mail) --> [mail].
-verb(show) --> [show].
 
 pn(jon) --> [jon].
 pn(me) --> [me].
 
 noun(file) --> [file].
-noun(files) --> [files].
 
 mail(jon,file).
 
-show(me,files) :- shell('ls').
