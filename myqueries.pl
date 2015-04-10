@@ -2,11 +2,11 @@
 % author:Salvatore DeSapio                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-s(PrologFact,fact) --> verb(Verb),np(Noun),
+s(PrologFact) --> verb(Verb),np(Noun),
 	{PrologFact=.. [Verb,Noun]}.
-s(PrologFact,fact) --> verb(Verb),np(Noun),preposition,pn(ProperNoun),
+s(PrologFact) --> verb(Verb),np(Noun),preposition,pn(ProperNoun),
 	{PrologFact=.. [Verb,Noun,ProperNoun]}.
-s(PrologFact,fact) --> verb(Verb),pn(ProperNoun),np(Noun),
+s(PrologFact) --> verb(Verb),pn(ProperNoun),np(Noun),
 	{PrologFact=.. [Verb,ProperNoun,Noun]}.
 
 np(Noun) --> det,noun(Noun).
@@ -31,3 +31,5 @@ pn(me) --> [me].
 
 noun(file) --> [file].
 noun(files) --> [files].
+
+mail(jon,file).
