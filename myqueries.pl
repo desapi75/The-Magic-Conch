@@ -33,3 +33,5 @@ noun(file) --> [file].
 noun(files) --> [files].
 
 mail(jon,file).
+
+show(me,files) :- shell('ls').
