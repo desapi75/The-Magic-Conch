@@ -19,5 +19,6 @@ det --> [the].
 det --> [a].
 det --> [my].
 det --> [this].
-pn(me) -->[me].
-
+pn(me) --> [me].
+pn(ProperNoun) --> [ProperNoun].
+noun(Noun) --> noun(Noun).
