@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % author:Salvatore DeSapio                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+:- multifile verb/3,noun/3.
 
 s(PrologFact) --> verb(Verb),np(Noun),
 	{PrologFact=.. [Verb,Noun]}.
@@ -18,7 +19,7 @@ det --> [the].
 det --> [a].
 det --> [my].
 det --> [this].
-
+pn(me) -->[me].
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % below are just stubs            %
@@ -26,7 +27,6 @@ det --> [this].
 verb(mail) --> [mail].
 
 pn(jon) --> [jon].
-pn(me) --> [me].
 
 noun(file) --> [file].
 
