@@ -21,14 +21,3 @@ det --> [my].
 det --> [this].
 pn(me) -->[me].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% below are just stubs            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-verb(mail) --> [mail].
-
-pn(jon) --> [jon].
-
-noun(file) --> [file].
-
-mail(jon,file).
-

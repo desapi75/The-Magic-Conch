@@ -4,3 +4,5 @@
 
 verb(mail) --> [mail].
 verb(send) --> [mail].
+
+mail(ProperNoun,Noun) :- shell('echo mail').
