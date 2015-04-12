@@ -1,7 +1,10 @@
 :- multifile verb/3, noun/3.
 
-verb(open) --> [open].
+verb(run) --> [open].
+verb(run) --> [run].
 noun(internet) --> [internet].
+%for some reason browser does not work
+noun(internet) --> [browser].
 
-open(internet) :- shell('firefox').
-open(internet) :- shell('google-chrome').
+run(internet) :- shell('firefox').
+run(internet) :- shell('google-chrome').

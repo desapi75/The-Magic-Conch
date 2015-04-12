@@ -4,6 +4,7 @@
 
 verb(mail) --> [mail].
 verb(mail) --> [send].
+verb(mail) --> [email].
 
 mail(ProperNoun,Noun) :-
 	string_concat('mail ', ProperNoun, Cmd1),
