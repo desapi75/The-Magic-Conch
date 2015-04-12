@@ -3,11 +3,14 @@
 :- multifile verb/3, noun/3.
 
 verb(mail) --> [mail].
-verb(send) --> [mail].
+verb(mail) --> [send].
 
 mail(ProperNoun,Noun) :-
-	atom_string(ProperNoun, Email),
-	atom_string(Noun, File),
-	string_concat('echo ', Email, Cmd),
-	string_concat(Cmd,File,Out),
+	string_concat('mail ', ProperNoun, Cmd1),
+	string_concat(Cmd1, ' < ', Cmd2),
+	string_concat(Cmd2,Noun,Out),
 	shell(Out).
+mail(ProperNoun,email) :-
+	string_concat('mail ', ProperNoun, Out),
+        shell(Out).
+

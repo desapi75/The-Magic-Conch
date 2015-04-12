@@ -17,8 +17,9 @@ preposition --> [in].
 preposition --> [on].
 det --> [the].
 det --> [a].
+det --> [an].
 det --> [my].
 det --> [this].
 pn(me) --> [me].
 pn(ProperNoun) --> [ProperNoun].
-noun(Noun) --> noun(Noun).
+noun(Noun) --> [Noun].
