@@ -1,11 +1,10 @@
 # The main file for THE-MAGIC-CONCH
 # author Salvatore DeSapio
 import subprocess
-
-print("\n\n")
+subprocess.call("clear")
 print("=============================================")
-print("=     The-Magic-Conch               =")
-print("=English to Shell Translater        =")
+print("=             The-Magic-Conch               =")
+print("=        English to Shell Translater        =")
 print("=============================================")
 plgcommand = [""]
 # get command from user
