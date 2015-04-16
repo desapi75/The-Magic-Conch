@@ -6,6 +6,6 @@ verb(search) --> [search].
 verb(search) --> [find].
 
 search(Noun) :-
-	string_concat('find /home -name ',Noun, Out),
+	string_concat('find 2>/dev/null /home -name ',Noun, Out),
         shell(Out).
 
