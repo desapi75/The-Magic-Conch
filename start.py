@@ -9,8 +9,8 @@ print("=============================================")
 plgcommand = [""]
 # get command from user
 while str(plgcommand[0]) != "quit":
-
-    command = raw_input('Hello, how can I help you?\n')
+    print("=============================================")
+    command = raw_input('Hello, how may I help you?\n')
     # split up words into a list and remove spaces
     plgcommand = command.split()
 

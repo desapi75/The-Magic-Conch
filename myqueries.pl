@@ -12,14 +12,16 @@ s(PrologFact) --> verb(Verb),pn(ProperNoun),np(Noun),
 
 np(Noun) --> det,noun(Noun).
 np(Noun) --> noun(Noun).
+np(ProperNoun) --> det,pn(ProperNoun).
+np(ProperNoun) --> pn(ProperNoun).
 preposition --> [to].
 preposition --> [in].
 preposition --> [on].
+preposition --> [with].
 det --> [the].
 det --> [a].
 det --> [an].
 det --> [my].
 det --> [this].
 pn(me) --> [me].
-pn(ProperNoun) --> [ProperNoun].
-noun(Noun) --> [Noun].
+pn(ProperNoun)--> [ProperNoun].

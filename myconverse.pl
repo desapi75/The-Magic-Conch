@@ -2,19 +2,6 @@
 % author: Salvatore DeSapio
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-run :-
-	tty_clear,
-	write('============================================='), nl,
-	write('=             The-Magic-Conch               ='), nl,
-	write('=        English to Shell Translater        ='), nl,
-	write('============================================='), nl,
-	converse.
-
-converse :-
-	nl, write('Hello, what would you like me to do?'), nl,
-	read(Sentence), 
-	parse_sentence(Sentence).
-
 parse_sentence([quit]) :- !.
 parse_sentence(Sentence) :-
 	s(Fact, Sentence, []), !,
