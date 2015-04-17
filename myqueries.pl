@@ -3,25 +3,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- multifile verb/3,noun/3.
 
-s(PrologFact) --> verb(Verb),np(Noun),
+s(PrologFact) --> verb(Verb), np(Noun),
 	{PrologFact=.. [Verb,Noun]}.
-s(PrologFact) --> verb(Verb),preposition,np(Noun),
-	{PrologFact=.. [Verb,Noun]}.
-s(PrologFact) --> verb(Verb),np(Noun),preposition,pn(ProperNoun),
+s(PrologFact) --> verb(Verb), pnp(ProperNoun), np(Noun),
 	{PrologFact=.. [Verb,ProperNoun,Noun]}.
-s(PrologFact) --> verb(Verb),pn(ProperNoun),np(Noun),
+s(PrologFact) --> verb(Verb), np(Noun), pnp(ProperNoun),
 	{PrologFact=.. [Verb,ProperNoun,Noun]}.
-s(PrologFact) --> verb(Verb),preposition,np(Noun),preposition,pn(ProperNoun),
-        {PrologFact=.. [Verb,ProperNoun,Noun]}.
 
 np(Noun) --> det,noun(Noun).
 np(Noun) --> noun(Noun).
 np(ProperNoun) --> pn(ProperNoun).
+np(ProperNoun) --> lesserpreposition,pn(ProperNoun).
+pnp(ProperNoun) --> pn(ProperNoun).
+pnp(ProperNoun) --> preposition,pn(ProperNoun).
 preposition --> [to].
 preposition --> [in].
 preposition --> [on].
 preposition --> [with].
-preposition --> [for].
+preposition --> [through].
+lesserpreposition --> [for].
 det --> [the].
 det --> [a].
 det --> [an].
