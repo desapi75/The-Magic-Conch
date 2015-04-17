@@ -4,5 +4,7 @@
 
 verb(show) --> [show].
 noun(files) --> [files].
+noun(directory) --> [directory].
+
 show(me,files) :- shell('ls').
 show(files) :- shell('ls').
