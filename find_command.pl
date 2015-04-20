@@ -9,12 +9,10 @@ verb(search) --> [locate].
 search(Noun) :-
 	string_concat('find 2>/dev/null /home -name ',Noun, Out),
         shell(Out).
-search(me,Noun) :-
-	string_concat('find 2>/dev/null /home -name ',Noun, Out),
-        shell(Out).
 search(ProperNoun, Noun) :-
-	string_concat('grep ', Noun, PreOut1),
-	string_concat(PreOut1, ' ', PreOut2),
-	string_concat(PreOut2, ProperNoun, Out),
+	string_concat('find 2>/dev/null /home -name ', ProperNoun, PreOut1),
+	string_concat(' -exec grep ', Noun, PreOut2),
+	string_concat(PreOut2, ' {} +', PreOut3),
+	string_concat(PreOut1, PreOut3, Out),
 	shell(Out).
 
