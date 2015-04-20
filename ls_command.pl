@@ -3,6 +3,7 @@
 :- multifile verb/3,noun/3.
 
 verb(show) --> [show].
+verb(show) --> [display].
 noun(files) --> [files].
 noun(directory) --> [directory].
 
