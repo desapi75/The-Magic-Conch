@@ -3,6 +3,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 parse_sentence([quit]) :- !.
+parse_sentence([]) :-
+	write('You did nothing.'), nl, !.
 parse_sentence(Sentence) :-
 	s(Fact, Sentence, []), !,
 	respond_to_sentence(Fact).

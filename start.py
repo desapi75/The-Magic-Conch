@@ -11,8 +11,12 @@ plgcommand = [""]
 while str(plgcommand[0]) != "quit":
     print("=============================================")
     command = raw_input('Hello, how may I help you?\n')
-    # split up words into a list and remove spaces
-    plgcommand = command.split()
+
+    if(command != ""):
+    	# split up words into a list and remove spaces
+    	plgcommand = command.split()
+    else:
+        plgcommand = [""]
 
 
     # create prolog command
