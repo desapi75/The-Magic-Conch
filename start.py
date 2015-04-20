@@ -12,21 +12,19 @@ while str(plgcommand[0]) != "quit":
     print("=============================================")
     command = raw_input('Hello, how may I help you?\n')
 
-    if(command != ""):
+   # if(command != ""):
     	# split up words into a list and remove spaces
-    	plgcommand = command.split()
-    else:
-        plgcommand = [""]
+    #	plgcommand = command.split()
+    #else:
+    #    plgcommand = [""]
+    # split up words into a list and remove spaces
+    plgcommand = command.split()
+    x=0
+    value=""
+    for index in plgcommand:
+        value += "'" + index + "',"
+        x+=1
+    value = value[:-1]
+    subprocess.Popen(["swipl","--quiet","-f","load.pl","-t","parse_sentence(["+value+"]),halt"])
 
-
-    # create prolog command
-    #plgcommand = "testparse("+str(plgcommand)+",Parse)"
-
-    #output command for testing purposes
-    print(str(plgcommand))
-    ###########################################
-    # This method will be scrapt in favor of using unix domain sockets
-    ################################
-    # start prolog interpreter
-    subprocess.call("swipl --quiet -f load.pl -t 'parse_sentence("+ str(plgcommand) +"),halt'", shell=True)
 
