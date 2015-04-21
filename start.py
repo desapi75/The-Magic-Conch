@@ -28,4 +28,4 @@ while str(plgcommand[0]) != "quit":
         	x+=1
     	value = value[:-1]
     	subprocess.Popen(["swipl","--quiet","-f","load.pl","-t","parse_sentence(["+value+"]),halt"])
-
+	plgcommand = [""]
