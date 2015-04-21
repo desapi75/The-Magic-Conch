@@ -10,8 +10,7 @@ parse_sentence(Sentence) :-
 	respond_to_sentence(Fact).
 	
 parse_sentence(_) :-
-	write('Please rephrase that.'), nl,
-	converse.
+	write('Please rephrase that.'), nl.
 respond_to_sentence(Command) :-
 	call(Command),
 	write('I just ran the command, '), write(Command), nl, !.
