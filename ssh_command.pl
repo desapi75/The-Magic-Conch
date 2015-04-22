@@ -5,6 +5,7 @@
 verb(ssh) --> [login].
 verb(ssh) --> [ssh].
 verb(ssh) --> [access].
+noun(features) --> [features].
 
 ssh(Noun) :-
         string_concat('ssh ', Noun, Out),

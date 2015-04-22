@@ -19,8 +19,8 @@ pnp(ProperNoun) --> preposition,pn(ProperNoun).
 preposition --> [to].
 preposition --> [in].
 preposition --> [on].
-preposition --> [with].
 preposition --> [through].
+preposition --> [with].
 lesserpreposition --> [for].
 det --> [the].
 det --> [a].
