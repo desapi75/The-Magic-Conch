@@ -10,10 +10,11 @@ noun(files) --> [files].
 noun(directory) --> [directory].
 
 show(me,files) :- shell('ls').
+show(me,Noun) :-
+     string_concat('cat ',Noun,Out),
+    shell(Out).
 show(files) :- shell('ls').
 show(Noun) :-
     string_concat('cat ',Noun,Out),
     shell(Out).
-show(me,Noun) :-
-     string_concat('cat ',Noun,Out),
-    shell(Out).
+
