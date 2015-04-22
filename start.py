@@ -4,7 +4,7 @@ import subprocess
 subprocess.call("clear")
 print("=============================================")
 print("=             The-Magic-Conch               =")
-print("=        English to Shell Translater        =")
+print("=        English to Shell Translator        =")
 print("=============================================")
 plgcommand = [""]
 # run until the user types quit
