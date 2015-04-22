@@ -17,6 +17,4 @@ parse_sentence(_) :-
 % if it does fit the grammar execute command
 respond_to_sentence(Command) :-
 	call(Command),
-	write('I just ran the command, '), write(Command), nl, 
-	write('============================================='), nl,
-	write('How, may I help you?'), nl, !.
+	write('I just ran the command, '), write(Command), nl,!.

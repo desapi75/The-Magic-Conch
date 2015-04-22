@@ -6,13 +6,13 @@ print("=============================================")
 print("=             The-Magic-Conch               =")
 print("=        English to Shell Translater        =")
 print("=============================================")
-print("=============================================")
-print("Hello, how may I help you?")
 plgcommand = [""]
 # run until the user types quit
 while str(plgcommand[0]) != "quit":
 	# get command from user
-	command = raw_input("")
+	print("=============================================")
+	command = raw_input("Hello, how may I help you?\n")
+	print("=============================================")
     	# split up words into a list and remove spaces
 	plgcommand = command.split()
 	x=0
@@ -22,9 +22,9 @@ while str(plgcommand[0]) != "quit":
         	x+=1
     	value = value[:-1]
 	# run the list through the prolog program
-    	subprocess.Popen(["swipl","--quiet","-f","load.pl","-t","parse_sentence(["+value+"]),halt"])
+    	process = subprocess.Popen(["swipl","--quiet","-f","load.pl","-t","parse_sentence(["+value+"]),halt"])	
+	process.wait()
 	# check that the command is not quit
 	if plgcommand != ["quit"]:
 		plgcommand = [""]
-	print("=============================================")
 subprocess.call("clear")
