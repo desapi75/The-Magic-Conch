@@ -10,6 +10,9 @@ noun(internet) --> [internet].
 %for some reason browser does not work
 noun(internet) --> [browser].
 
+run(internet) :- shell('firefox').
+
 run(Noun) :-
 	string_concat('xdg-open ', Noun, Out),
 	shell(Out).
+
