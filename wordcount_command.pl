@@ -1,4 +1,5 @@
 %Counts words in a file
+
 :- multifile verb/3,noun/3.
 
 verb(count) --> [count].

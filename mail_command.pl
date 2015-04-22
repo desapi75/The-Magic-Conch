@@ -1,5 +1,5 @@
 % send internet mail
-
+% author Salvatore DeSapio and Jon Frederickson
 :- multifile verb/3, noun/3.
 
 verb(mail) --> [mail].

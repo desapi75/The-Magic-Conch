@@ -1,5 +1,5 @@
 % remotely log into a unix system
-
+% author Salvatore DeSapio
 :- multifile verb/3, noun/3.
 
 verb(ssh) --> [login].

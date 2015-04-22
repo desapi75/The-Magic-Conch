@@ -1,5 +1,5 @@
 # The main file for THE-MAGIC-CONCH
-# author Salvatore DeSapio and John Fiduk
+# author Salvatore DeSapio and Jason Fiduk
 import subprocess
 subprocess.call("clear")
 print("=============================================")

@@ -3,6 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 :- multifile verb/3,noun/3.
 
+% Context Free Grammars
 s(PrologFact) --> verb(Verb), np(Noun),
 	{PrologFact=.. [Verb,Noun]}.
 s(PrologFact) --> verb(Verb), pnp(ProperNoun), np(Noun),
