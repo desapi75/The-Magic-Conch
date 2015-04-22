@@ -1,5 +1,5 @@
 % search your computer for a file
-% author Salvatore DeSapio
+% author Salvatore DeSapio, Jonathan Frederickson
 :- multifile verb/3, noun/3.
 
 verb(search) --> [search].
